@@ -2,20 +2,76 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: Labs
-  :name: _labs
+  :caption: Technology Overview Labs
+  :name: _technology_overview
   :hidden:
 
-  examplelab1/examplelab1
-  examplelab2/examplelab2
+  lab01/lab01
 
 .. toctree::
   :maxdepth: 2
-  :caption: Optional Labs
-  :name: _optional_labs
+  :caption: Planning and Design Labs
+  :name: _planning_and_design
   :hidden:
 
-  examplelab3/examplelab3
+  lab02/lab02
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Installation and Configuration Labs
+  :name: _installation_and_configuration
+  :hidden:
+
+  lab03/lab03
+  lab04/lab04
+  lab05/lab05
+  lab06/lab06
+  lab07/lab07
+  lab08/lab08
+  lab09/lab09
+  lab10/lab10
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Deploying Workloads Labs
+  :name: _deploying_workloads
+  :hidden:
+
+  lab11/lab11
+  lab12/lab12
+  lab13/lab13
+  lab14/lab14
+  lab15/lab15
+  lab16/lab16
+  lab17/lab17
+  lab18/lab18
+  lab19/lab19
+  lab20/lab20
+  lab21/lab21
+  lab22/lab22
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Prism Central Monitoring and Management Labs
+  :name: _prism_central_monitoring_and_management
+  :hidden:
+
+  lab23/lab23
+  lab24/lab24
+  lab25/lab25
+  lab26/lab26
+  lab27/lab27
+  lab28/lab28
+  lab29/lab29
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Capacity Planning Labs
+  :name: _capacity_planning
+  :hidden:
+
+  lab30/lab30
+  lab31/lab31
 
 .. toctree::
   :maxdepth: 2
