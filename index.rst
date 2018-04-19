@@ -6,7 +6,7 @@
   :name: _technology_overview
   :hidden:
 
-  lab01/lab01
+  lab01_prism_element_tour/lab01_prism_element_tour
 
 .. toctree::
   :maxdepth: 2
@@ -98,6 +98,17 @@ What's New
   - AOS 5.6
   - AFS 3.0
 - Added :ref:`example_lab_3`
+
+HPOC Info Provided by instructor
+++++++++++++++++++++++++++++++++
+
+- **Cluster IP** - 10.21.XX.37
+- **Username** - admin
+- **Password** - HPOC Password
+- **HPOC Subnet** - 10.21.XX.0
+- *Subnet Mask** - 255.255.255.128
+- **Gateway** - 10.21.XX.1
+- **DNS Servers** - 10.21.253.10,10.21.253.11
 
 Access Instructions
 +++++++++++++++++++
