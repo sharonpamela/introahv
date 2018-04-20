@@ -14,7 +14,7 @@
   :name: _planning_and_design
   :hidden:
 
-  lab02/lab02
+  lab02_sizer/lab02_sizer
 
 .. toctree::
   :maxdepth: 2
@@ -106,7 +106,7 @@ HPOC Info Provided by instructor
 - **Username** - admin
 - **Password** - HPOC Password
 - **HPOC Subnet** - 10.21.XX.0
-- *Subnet Mask** - 255.255.255.128
+- **Subnet Mask** - 255.255.255.128
 - **Gateway** - 10.21.XX.1
 - **DNS Servers** - 10.21.253.10,10.21.253.11
 
