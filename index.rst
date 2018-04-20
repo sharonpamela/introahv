@@ -99,7 +99,7 @@ What's New
   - AFS 3.0
 - Added :ref:`example_lab_3`
 
-HPOC Info Provided by instructor
+HPOC Info Provided by Instructor
 ++++++++++++++++++++++++++++++++
 
 - **Cluster IP** - 10.21.XX.37
