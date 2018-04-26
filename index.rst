@@ -99,16 +99,111 @@ What's New
   - AFS 3.0
 - Added :ref:`example_lab_3`
 
-HPOC Info Provided by Instructor
-++++++++++++++++++++++++++++++++
+Environment Details
++++++++++++++++++++
 
-- **Cluster IP** - 10.21.XX.37
-- **Username** - admin
-- **Password** - HPOC Password
-- **HPOC Subnet** - 10.21.XX.0
-- **Subnet Mask** - 255.255.255.128
-- **Gateway** - 10.21.XX.1
-- **DNS Servers** - 10.21.253.10,10.21.253.11
+Nutanix Workshops are intended to be run in the Nutanix Hosted POC environment. Your cluster will be provisioned with all necessary images, networks, and VMs required to complete the exercises.
+
+Networking
+..........
+
+Hosted POC clusters follow a standard naming convention, where the numerical suffix corresponds to the subnet for that cluster:
+
+- **Cluster Name** - POC\ *XYZ*
+- **Subnet** - 10.21.\ *XYZ*\ .0
+- **Cluster IP** - 10.21.\ *XYZ*\ .37
+
+For example:
+
+- **Cluster Name** - POC055
+- **Subnet** - 10.21.55.0
+- **Cluster IP** - 10.21.55.37
+
+Throughout the Workshop there are multiple instances where you will need to substitue *XYZ* with the correct octet for your subnet, for example:
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - IP Address
+     - Description
+   * - 10.21.\ *XYZ*\ .37
+     - Nutanix Cluster Virtual IP
+   * - 10.21.\ *XYZ*\ .39
+     - **PC** VM IP, Prism Central
+   * - 10.21.\ *XYZ*\ .40
+     - **DC** VM IP, NTNXLAB.local Domain Controller
+
+Each cluster is configured with 2 VLANs which can be used for VMs:
+
+.. list-table::
+  :widths: 25 25 10 40
+  :header-rows: 1
+
+  * - Network Name
+    - Address
+    - VLAN
+    - DHCP Scope
+  * - Primary
+    - 10.21.\ *XYZ*\ .1/25
+    - 0
+    - 10.21.\ *XYZ*\ .50-10.21.\ *XYZ*\ .124
+  * - Secondary
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .132-10.21.\ *XYZ*\ .253
+
+Credentials
+...........
+
+.. note::
+
+  The *<Cluster Password>* is unique to each cluster and will be provided by the leader of the Workshop.
+
+.. list-table::
+   :widths: 25 35 40
+   :header-rows: 1
+
+   * - Credential
+     - Username
+     - Password
+   * - Prism Element
+     - admin
+     - *<Cluster Password>*
+   * - Prism Central
+     - admin
+     - *<Cluster Password>*
+   * - Controller VM
+     - nutanix
+     - *<Cluster Password>*
+   * - Prism Central VM
+     - nutanix
+     - *<Cluster Password>*
+
+Each cluster has a dedicated domain controller VM, **DC**, responsible for providing AD services for the **NTNXLAB.local** domain. The domain is populated with the following Users and Groups:
+
+.. list-table::
+   :widths: 25 35 40
+   :header-rows: 1
+
+   * - Group
+     - Username(s)
+     - Password
+   * - Administrators
+     - Administrator
+     - nutanix/4u
+   * - SSP Admins
+     - adminuser01-adminuser25
+     - nutanix/4u
+   * - SSP Developers
+     - devuser01-devuser25
+     - nutanix/4u
+   * - SSP Power Users
+     - poweruser01-poweruser25
+     - nutanix/4u
+   * - SSP Basic Users
+     - basicuser01-basicuser25
+     - nutanix/4u
 
 Access Instructions
 +++++++++++++++++++
