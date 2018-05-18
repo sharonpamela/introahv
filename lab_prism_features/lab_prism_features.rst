@@ -1,9 +1,8 @@
-.. Adding labels to the beginning of your lab is helpful for linking to the lab from other pages
-.. _example_lab_1:
+.. _lab_prism_features:
 
--------------
-Example Lab 1
--------------
+--------------------
+Lab - Prism Features
+--------------------
 
 Overview
 ++++++++

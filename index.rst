@@ -25,7 +25,7 @@
   :hidden:
 
   lab_deploying_and_managing_workloads/lab_deploying_and_managing_workloads
-
+  lab_backup_and_dr_solutions/lab_backup_and_dr_solutions
 
 .. toctree::
   :maxdepth: 2
@@ -33,7 +33,7 @@
   :name: _monitoring_and_managing_the_environment
   :hidden:
 
-  lab03/lab03
+  lab_prism_features/lab_prism_features
 
 .. toctree::
   :maxdepth: 2

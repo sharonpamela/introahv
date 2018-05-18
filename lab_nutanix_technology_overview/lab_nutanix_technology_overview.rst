@@ -1,9 +1,8 @@
+.. _lab_nutanix_technology_overview:
 
-.. _lab_1:
-
--------------------------------------------
-Lab 1 - Prism Element Tour (Instructor Led)
--------------------------------------------
+---------------------------------
+Lab - Nutanix Technology Overview
+---------------------------------
 
 Overview
 ++++++++

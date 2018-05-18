@@ -1,9 +1,8 @@
-.. Adding labels to the beginning of your lab is helpful for linking to the lab from other pages
-.. _example_lab_3:
+.. _lab_nutanix_data_handling:
 
--------------
-Example Lab 3
--------------
+---------------------------
+Lab - Nutanix Data Handling
+---------------------------
 
 Overview
 ++++++++
