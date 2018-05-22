@@ -85,25 +85,25 @@ Where would you locate the version of AOS you are running?
 
 .. figure:: images/nutanix_tech_overview_06.png
 
-*You can do this by clicking on the **User** drop down (:fa:`user`), and clicking **About Nutanix**.*
+*You can do this by clicking on the **User*** *drop down (:fa:`user`), and clicking **About Nutanix***.
 
 How would you get to the following screen to view a summary of the number of hosts (or nodes) and the resource capacity and current utilization?
 
 .. figure:: images/nutanix_tech_overview_07.png
 
-*In **Prism > Hardware**, click ** Hardware**, then click **Table**.*
+*In **Prism > Hardware** *, *click **Hardware***, *then click **Table** *.
 
 How would you get the following screen to see the health of your cluster?
 
 .. figure:: images/nutanix_tech_overview_08.png
 
-*In **Prism > Health**, click **Health**, then click **Summary** in the right pane.*
+*In **Prism > Health** *, *click **Health**, then click **Summary** * *in the right pane*.
 
 What page would show you the latest activity in the system? On this page, you can monitor the progress of any task and keep track of what has been done in the past using time stamps. Can you figure out two different ways to get there?
 
 .. figure:: images/nutanix_tech_overview_09.png
 
-First Way, *In **Prism > Tasks**, click **Tasks**.* Second Way, *click :fa:`dot-circle`*
+First Way, *In **Prism > Tasks** *, *click **Tasks**.* Second Way, *click :fa:`dot-circle` *.
 
 Prism Central
 +++++++++++++
@@ -159,17 +159,17 @@ How would you find the screen that shows you a table of all the hosts managed by
 
   If this Prism Central instance was managing multiple clusters, this screen would show the hosts for all of the clusters being managed.
 
-*In **Prism Central > Explore**, click **Hosts** on left-hand menu.*
+*In **Prism Central > Explore** *, *click **Hosts** * *on left-hand menu.*
 
 How would you find the screen that lists all of the VMs currently deployed. This screen looks similar to the figure below?
 
 .. figure:: images/nutanix_tech_overview_12.png
 
-*In **Prism Central > Explore**, click **VMs** on left-hand menu.*
+*In **Prism Central > Explore** *, *click **VMs** * *on left-hand menu.*
 
 What page would show you the latest activity in the system? On this page, you can monitor the progress of any task and keep track of what has been done in the past using time stamps. Can you figure out two different ways to get there?
 
-First Way, *In **Prism Central > Home**, click **View All Tasks**.* Second Way, *click :fa:`dot-circle`*
+First Way, *In **Prism Central > Home** *, *click **View All Tasks**. * Second Way, *click :fa:`dot-circle`*
 
 Takeaways
 +++++++++
