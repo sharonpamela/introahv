@@ -11,7 +11,7 @@
 .. toctree::
   :maxdepth: 2
   :caption: Installing and Configuring
-  :name: _Installing_and_Configuring
+  :name: _installing_and_configuring
   :hidden:
 
   lab_basic_configuration/lab_basic_configuration
