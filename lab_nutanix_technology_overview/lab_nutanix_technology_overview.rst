@@ -165,7 +165,7 @@ How would you find the screen that lists all of the VMs currently deployed. This
 
 .. figure:: images/nutanix_tech_overview_12.png
 
-*n **Prism Central > Explore**, click **VMs** on left-hand menu.
+In **Prism Central > Explore**, click **VMs** on left-hand menu.
 
 What page would show you the latest activity in the system? On this page, you can monitor the progress of any task and keep track of what has been done in the past using time stamps. Can you figure out two different ways to get there?
 
