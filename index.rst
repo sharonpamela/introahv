@@ -42,11 +42,8 @@
   :hidden:
 
   ssp/ssp
-  enable_flow/enable_flow
-  quarantine_vm/quarantine_vm
-  isolate_environments/isolate_environments
-  secure_app/secure_app
-  flow_visualization/flow_viz
+  flow/flow
+
 
 .. toctree::
   :maxdepth: 2
