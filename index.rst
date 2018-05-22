@@ -37,6 +37,19 @@
 
 .. toctree::
   :maxdepth: 2
+  :caption: Optional Labs
+  :name: _optional_labs
+  :hidden:
+
+  ssp/ssp
+  enable_flow/enable_flow
+  quarantine_vm/quarantine_vm
+  isolate_environments/isolate_environments
+  secure_app/secure_app
+  flow_visualization/flow_viz
+
+.. toctree::
+  :maxdepth: 2
   :caption: Appendix
   :name: _appendix
   :hidden:
