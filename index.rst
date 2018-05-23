@@ -6,6 +6,7 @@
   :name: _technology_overview
   :hidden:
 
+  what_is_nutanix/what_is_nutanix
   lab_nutanix_technology_overview/lab_nutanix_technology_overview
 
 .. toctree::
@@ -69,6 +70,27 @@ What's New
 
 - Workshop updated for the following software versions:
   - AOS 5.6
+
+Introductions
++++++++++++++
+
+- Name
+- Familiarity with Nutanix
+
+Initial Setup
++++++++++++++
+
+- Take note of the *Passwords* being used.
+- Log into your virtual desktops (connection info below)
+- Start downloading the Linux ISO image for later use - http://vx2-downloads.raspberrypi.org/pixel_x86/images/pixel_x86-2016-12-13/2016-12-13-pixel-x86-jessie.iso
+
+Agenda
+++++++
+
+- Nutanix Technology Overview
+- Installing and Configuring
+- Deploying and Managing Workloads
+- Monitoring and Managing the Environment
 
 Environment Details
 +++++++++++++++++++
