@@ -15,6 +15,7 @@
   :name: _installing_and_configuring
   :hidden:
 
+  nutanix_terminology/nutanix_terminology
   lab_basic_configuration/lab_basic_configuration
   lab_nutanix_data_handling/lab_nutanix_data_handling
   lab_networking_with_ahv/lab_networking_with_ahv

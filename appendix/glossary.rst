@@ -22,6 +22,26 @@ Prism Central
 
 Prism Central is the multicloud control and management interface for Nutanix. Prism Central can manage multiple Nutanix clusters and serves as an aggregation point for monitoring and analytics.
 
+Node
+++++
+
+Industry standard x86 server with server-attached SSD and optional HDD (All Flash & Hybrid Options).
+
+Block
++++++
+
+2U rack mount chassis that contains 1, 2 or 4 nodes with shared power and fans, and no shared no backplane.
+
+Storage Pool
+++++++++++++
+
+A storage pool is a group of physical storage devices including PCIe SSD, SSD, and HDD devices for the cluster.
+
+Storage Container
++++++++++++++++++
+
+A container is a subset of available storage used to implement storage policies.
+
 Application Security Policy
 +++++++++++++++++++++++++++
 
