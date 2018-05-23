@@ -9,6 +9,19 @@ Overview
 
 Here is where we provide a high level description of what the user will be doing during this module. We want to frame why this content is relevant to an SE/Services Consultant and what we expect them to understand after completing the lab.
 
+Image Configuration
+.................
+
+Verify Image Configurations has what you need for your Workshop
+
+In **Prism Element**, click :fa:`cog` **> Image Configuration**
+
+Depending on what you selected when reserving your HPOC you will see a CentOS7 Image & Windows 2012r2 Image
+
+You may also see a VM for each already deployed. You can decide if you want to use them or delete them.
+
+If you need upload any other ISOs or Images now is a good time to do so
+
 Creating a VM
 +++++++++++++
 

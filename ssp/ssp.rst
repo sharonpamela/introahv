@@ -1,4 +1,5 @@
--------------------
+.. _ssp:
+
 Self-Service Portal
 -------------------
 
@@ -11,6 +12,10 @@ In this exercise you will use Prism Central to configure Self Service Portal (SS
 
 Setup Authentication and Role Mapping in Prism Central
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. note::
+
+  If you have already configured **Authentication** in Prism Central, skip this section.
 
 In **Prism Central**, click :fa:`cog` **> Authentication**
 
@@ -47,7 +52,11 @@ Fill out the following fields and click **Save**:
 Close the Role Mapping and Authentication windows
 
 Configure Self Service Portal
-+++++++++++++++++
++++++++++++++++++++++++++++++
+
+.. note::
+
+  If you have already configured **SSP** in Prism Central, skip this section.
 
 We will use the following user information
 
@@ -71,7 +80,7 @@ Fill out the following fields and click **Next**:
 
 - **Domain** - ntnxlab.local
 - **Username** - administrator@ntnxlab.local
-- **Passord** - nutanix/4u
+- **Password** - nutanix/4u
 
   .. figure:: images/ssp03.png
 
@@ -88,7 +97,7 @@ Click **Save**
   .. figure:: images/ssp06.png
 
 Create Projects
-+++++++++++++
++++++++++++++++
 
 In this section of the exercise we will create 3 Projects. Each project will have permissions set for different Active Directory groups.
 
@@ -97,7 +106,7 @@ In **Prism Central**, click **Explore**
 Click **Projects**
 
 Create **Developers** Project
-.................
+.............................
 
 Click **Create Project**
 
@@ -133,7 +142,7 @@ Confirm everything is filled out, and click **Save**
   .. figure:: images/ssp10.png
 
 Create **Power Users** Project
-.................
+..............................
 
 Click **Create Project**
 
@@ -165,7 +174,7 @@ Confirm everything is filled out, and click **Save**
   .. figure:: images/ssp11.png
 
 Create **Calm** Project
-.................
+.......................
 
 Click **Create Project**
 
@@ -204,14 +213,14 @@ Confirm everything is filled out, and click **Save**
   .. figure:: images/ssp12.png
 
 Use Self Service Portal
-+++++++++++++
++++++++++++++++++++++++
 
 In this exercise we will login into Prism Central as different users from different AD groups. Then we can compare what we see in SSP, and what we can do.
 
 Lets Start by logging out of Prism Central
 
 Use Self Service Portal as a SSP Admin
-.................
+......................................
 
 Log into Prism Central with the following credentials:
 
@@ -253,7 +262,7 @@ Click on **Catalog Items**, and you will see the two images you just added:
   .. figure:: images/ssp18.png
 
 Use Self Service Portal as a Developer
-.................
+......................................
 
 Log into Prism Central with the following credentials:
 
@@ -297,7 +306,7 @@ You should now see VM **Developer VM 001** listed
 Lets see what happens when we log in as a user from a different group
 
 Use Self Service Portal as a Power User
-.................
+.......................................
 
 Log into Prism Central with the following credentials:
 

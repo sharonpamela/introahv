@@ -12,9 +12,31 @@ Here is where we provide a high level description of what the user will be doing
 Using Text and Figures
 ++++++++++++++++++++++
 
+Setup user VM network
+.................
 
+In **Prism > VM**, click ** VM**, then click **Table**
 
-Click **Submit > Save**.
+Click **Network Config**
+Click **User VM Interfaces**
+
+Click **Create Network**
+
+Fill out the following fields and click **Save**:
+
+- **Name** - Primary
+- **VLAN ID** - 0
+- **Enable IP Address Management** - Checked
+- **Network IP Address / Prefix Length** - 10.x.x.0/25
+- **Gateway** - 10.21.XX.1
+- **DNS Servers** - 10.21.253.10,10.21.253.11
+- **Domain Search** - nutanixdc.local
+- **Domain name** - nutanixdc.local
+- **TFT Server** - empty
+- **Boot File** - empty
+- **Create Pool** - 10.21.XX.50-10.21.XX.120
+- **Override DHCP Server** - unchecked  
+
 
 Takeaways
 +++++++++
