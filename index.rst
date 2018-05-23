@@ -17,7 +17,9 @@
 
   nutanix_terminology/nutanix_terminology
   lab_basic_configuration/lab_basic_configuration
+  nutanix_data_handling/nutanix_data_handling
   lab_nutanix_data_handling/lab_nutanix_data_handling
+  networking_with_ahv/networking_with_ahv
   lab_networking_with_ahv/lab_networking_with_ahv
 
 .. toctree::
@@ -43,6 +45,7 @@
   :name: _optional_labs
   :hidden:
 
+  authentication/authentication
   ssp/ssp
   flow/flow
 
