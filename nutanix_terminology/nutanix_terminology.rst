@@ -264,3 +264,10 @@ Flow Scenario – Environment Zoning with Isolation
 - Moving workloads across environments is simply swapping the categories from Dev to Prod
 
 .. figure:: images/nutanix_terminology_18.png
+
+Video Demonstration: Resiliency
++++++++++++++++++++++++++++++++
+
+Watch this video demonstration of resiliency during a sequential node failure test using Nutanix X-Ray.
+
+https://nutanixinc-my.sharepoint.com/personal/sharon_santana_nutanix_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsharon%5Fsantana%5Fnutanix%5Fcom%2FDocuments%2Fx%2Dray%2Dsequential%20node%20failure%2Emp4&parent=%2Fpersonal%2Fsharon%5Fsantana%5Fnutanix%5Fcom%2FDocuments&slrid=e1626a9e%2D806c%2D5000%2Dd3e2%2Da58b16b774e5

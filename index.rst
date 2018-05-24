@@ -15,10 +15,9 @@
   :name: _nutanix_configuration_labs
   :hidden:
 
-  lab_nutanix_technology_overview/lab_nutanix_technology_overview
-  lab_basic_configuration/lab_basic_configuration
-  lab_nutanix_data_handling/lab_nutanix_data_handling
-  lab_networking_with_ahv/lab_networking_with_ahv
+  lab_nutanix_tech_overview/lab_nutanix_tech_overview
+  lab_storage_configuration/lab_storage_configuration
+  lab_network_configuration/lab_network_configuration
 
 .. toctree::
   :maxdepth: 2
