@@ -7,19 +7,17 @@
   :hidden:
 
   what_is_nutanix/what_is_nutanix
-  lab_nutanix_technology_overview/lab_nutanix_technology_overview
+  nutanix_terminology/nutanix_terminology
 
 .. toctree::
   :maxdepth: 2
-  :caption: Installing and Configuring
-  :name: _installing_and_configuring
+  :caption: Nutanix Configuration Labs
+  :name: _nutanix_configuration_labs
   :hidden:
 
-  nutanix_terminology/nutanix_terminology
+  lab_nutanix_technology_overview/lab_nutanix_technology_overview
   lab_basic_configuration/lab_basic_configuration
-  nutanix_data_handling/nutanix_data_handling
   lab_nutanix_data_handling/lab_nutanix_data_handling
-  networking_with_ahv/networking_with_ahv
   lab_networking_with_ahv/lab_networking_with_ahv
 
 .. toctree::
