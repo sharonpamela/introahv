@@ -4,11 +4,11 @@
 Nutanix Terminology
 -------------------
 
-Nutanix HCI Terminology
-+++++++++++++++++++++++
+Nutanix HCI
++++++++++++
 
-Physical Infrastructure Terminology
-...................................
+Physical Infrastructure
+.......................
 
 A Nutanix cluster is made up of Nodes and Blocks.
 
@@ -21,8 +21,8 @@ Nutanix presents the physical disks as one **Storage Pool**, that can be divided
 
 .. figure:: images/nutanix_terminology_02.png
 
-Nutanix Storage Terminology
-+++++++++++++++++++++++++++
+Nutanix Storage
++++++++++++++++
 
 Tunable Redundancy
 ..................
@@ -142,7 +142,7 @@ Seamless VM Migration
 
 .. figure:: images/nutanix_terminology_11.png
 
-Nutanix VM Mobility Terminology
+Nutanix VM Mobility
 +++++++++++++++++++++++++++++++
 
 Acropolis Dynamic Scheduling (ADS)
@@ -217,8 +217,8 @@ Use Cases:
 
 .. figure:: images/nutanix_terminology_15.png
 
-Nutanix Networking Terminology
-++++++++++++++++++++++++++++++
+Nutanix Networking
+++++++++++++++++++
 
 AHV – Software Defined Networking
 .................................
@@ -264,6 +264,27 @@ Flow Scenario – Environment Zoning with Isolation
 - Moving workloads across environments is simply swapping the categories from Dev to Prod
 
 .. figure:: images/nutanix_terminology_18.png
+
+Nutanix Image Management
+++++++++++++++++++++++++
+
+Image service
+.............
+
+- Managed catalog of disk images (RAW & ISO)
+- Leverage existing images with AHV
+- Image management through PE or PC
+- Inline conversion to Acropolis DSF
+- Broad Format support:
+  - qcow
+  - qcow2
+  - vmdk
+  - VHD
+  - VHDx
+  - RAW
+  - ISO
+
+.. figure:: images/nutanix_terminology_19.png
 
 Video Demonstration: Resiliency
 +++++++++++++++++++++++++++++++
