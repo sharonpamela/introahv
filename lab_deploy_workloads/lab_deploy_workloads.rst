@@ -26,7 +26,7 @@ Fill out the following fields and click **Upload File**:
 
 Next, fill out the following fields and click **Save**:
 
-- **Image Name** - RasberryPI_*intials*
+- **Image Name** - RasberryPI_\*intials*
 - **Image Type** - ISO
 - **Image Description** - (Optional) Add a description
 
@@ -47,7 +47,7 @@ In **Prism Central > Explore > VMs**, click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Linux_VM_*intials*
+- **Name** - Linux_VM_\*intials*
 - **Description** - (Optional) Description for your VM.
 - **vCPU(s)** - 1
 - **Number of Cores per vCPU** - 1
@@ -56,17 +56,17 @@ Fill out the following fields and click **Save**:
 .. figure:: images/deploy_workloads_03.png
 
 - Select **+ Add New Disk**
-  - **Type** - DISK
-  - **Operation** - Clone from Image Service
-  - **Image** - RasberryPI_*intials* (The Image we added above)
-  - **Storage Container** - Default Container
-  - Select **Add**
+- **Type** - DISK
+- **Operation** - Clone from Image Service
+- **Image** - RasberryPI_\*intials* (The Image we added above)
+- **Storage Container** - Default Container
+- Select **Add**
 
 .. figure:: images/deploy_workloads_04.png
 
 - Select **Add New NIC**
-  - **VLAN Name** - Primary
-  - Select **Add**
+- **VLAN Name** - Primary
+- Select **Add**
 
 Creating a Windows VM
 +++++++++++++++++++++
@@ -81,32 +81,32 @@ In **Prism Central > Explore > VMs**, click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Windows_VM_*intials*
+- **Name** - Windows_VM_\*intials*
 - **Description** - (Optional) Description for your VM.
 - **vCPU(s)** - 2
 - **Number of Cores per vCPU** - 1
 - **Memory** - 4 GiB
-- Select **:fa:`pencil`** next to CDROM
-  - **Operation** - Clone from Image Service
-  - **Image** - Windows VM ISO
-  - Select **Update**
+- Select **:fa:`pencil` ** next to CDROM
+- **Operation** - Clone from Image Service
+- **Image** - Windows VM ISO
+- Select **Update**
 
 - Select **+ Add New Disk**
-  - **Type** - DISK
-  - **Operation** - Allocate on Storage Container
-  - **Storage Container** - Default Container
-  - **Size (GiB)** - 30 GiB
-  - Select **Add**
+- **Type** - DISK
+- **Operation** - Allocate on Storage Container
+- **Storage Container** - Default Container
+- **Size (GiB)** - 30 GiB
+- Select **Add**
 
 - Select **+ Add New Disk**
-  - **Type** - CDROM
-  - **Operation** - Clone from Image Service
-  - **Image** - Nutanix VirtIO
-  - Select **Add**
+- **Type** - CDROM
+- **Operation** - Clone from Image Service
+- **Image** - Nutanix VirtIO
+- Select **Add**
 
 - Select **Add New NIC**
-  - **VLAN Name** - Primary
-  - Select **Add**
+- **VLAN Name** - Primary
+- Select **Add**
 
 Now lets power on the VM:
 
