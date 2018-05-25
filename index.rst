@@ -25,8 +25,10 @@
   :name: _deploying_and_managing_workloads
   :hidden:
 
-  lab_deploying_and_managing_workloads/lab_deploying_and_managing_workloads
-  lab_backup_and_dr_solutions/lab_backup_and_dr_solutions
+  backup_and_dr/backup_and_dr
+  lab_deploy_workloads/lab_deploy_workloads
+  lab_manage_workloads/lab_manage_workloads
+  lab_backup_and_dr/lab_backup_and_dr
 
 .. toctree::
   :maxdepth: 2
