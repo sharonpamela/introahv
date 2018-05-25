@@ -7,138 +7,149 @@ Lab - Managing Workloads
 Overview
 ++++++++
 
-Learn about basic VM deployment and management.
+Get experience using VM management tasks from Prism, which include power actions, searching, cloning, and migrating.
 
-Image Configuration
-...................
+Workload Management
++++++++++++++++++++
 
-We will upload a small Linux distro (Raspian OS) to use for deploying VMs.
+Now that you have a couple VMs deployed, let’s have some fun and explore some of the VM management tasks with AHV.
 
-In **Prism Central > Explore**, click **Images**.
+Power Actions and Console Access
+................................
 
-Next click **Add Image**, and click **URL**.
+Explore VM power actions and console access.
 
-Fill out the following fields and click **Upload File**:
+In **Prism Central > Explore > VMs**.
 
-- **Enter Image URL** - http://vx2-downloads.raspberrypi.org/pixel_x86/images/pixel_x86-2016-12-13/2016-12-13-pixel-x86-jessie.iso
-
-.. figure:: images/deploy_01.png
-
-Next, fill out the following fields and click **Save**:
-
-- **Image Name** - RasberryPI_*intials*
-- **Image Type** - ISO
-- **Image Description** - (Optional) Add a description
-
-.. figure:: images/deploy_02.png
+Locate the Linux VM you created in the previous lab (Linux_VM_*intials*). (Use Prism’s search function if necessary)
 
 .. note::
 
-  Image management in Prism Central allows you to upload images that can be used to deploy workloads in any of the clusters registered to that Prism Central instance.
-  This tool can also convert VM disk images to formats that AHV can understand.
-  The image service supports raw, vhd, vhdx, vmdk, vdi, iso, and qcow2 disk formats.
-
-Creating a Linux VM
-+++++++++++++++++++
-
-Deploy a Linux VM from Prism Central.
-
-In **Prism Central > Explore > VMs**, click **Create VM**.
-
-Fill out the following fields and click **Save**:
-
-- **Name** - Linux_VM_*intials*
-- **Description** - (Optional) Description for your VM.
-- **vCPU(s)** - 1
-- **Number of Cores per vCPU** - 1
-- **Memory** - 2 GiB
-
-.. figure:: images/deploy_03.png
-
-- Select **+ Add New Disk**
-  - **Type** - DISK
-  - **Operation** - Clone from Image Service
-  - **Image** - RasberryPI_*intials* (The Image we added above)
-  - **Storage Container** - Default Container
-  - Select **Add**
-
-.. figure:: images/deploy_04.png
-
-- Select **Add New NIC**
-  - **VLAN Name** - Primary
-  - Select **Add**
-
-Creating a Windows VM
-+++++++++++++++++++++
-
-Deploy a Windows VM from Prism Central.
-
-..note::
-
-  Nutanix provides a set of guest tools and drivers comparable to VMware Tools. To install a Windows-based OS, the I/O drivers must be provided at install time. Nutanix provides a customized set of virtualized I/O drivers for Windows OS on AHV.
-
-In **Prism Central > Explore > VMs**, click **Create VM**.
-
-Fill out the following fields and click **Save**:
-
-- **Name** - Windows_VM_*intials*
-- **Description** - (Optional) Description for your VM.
-- **vCPU(s)** - 2
-- **Number of Cores per vCPU** - 1
-- **Memory** - 4 GiB
-- Select **:fa:`pencil`** next to CDROM
-  - **Operation** - Clone from Image Service
-  - **Image** - Windows VM ISO
-  - Select **Update**
-
-- Select **+ Add New Disk**
-  - **Type** - DISK
-  - **Operation** - Allocate on Storage Container
-  - **Storage Container** - Default Container
-  - **Size (GiB)** - 30 GiB
-  - Select **Add**
-
-- Select **+ Add New Disk**
-  - **Type** - CDROM
-  - **Operation** - Clone from Image Service
-  - **Image** - Nutanix VirtIO
-  - Select **Add**
-
-- Select **Add New NIC**
-  - **VLAN Name** - Primary
-  - Select **Add**
+  Note that the Power State column for that VM shows a red dot, indicating that the VM is powered off.
 
 Now lets power on the VM:
 
 Select the VM, then click **Power On** from the **Actions** drop-down menu.
 
+.. note::
+
+  See the list of available actions (Update, Delete, Clone, Launch Console, Power On, Pause/Suspend, Snapshot, Migrate, and so on).
+  Note that Launch Console is shaded. This action is not available because the VM is off.
+
 Next lets open a console session:
 
 Select the VM, then click **Launch Console** from the **Actions** drop-down menu.
 
-Progress through the standard install questions until you reach the Windows install location.
+.. note::
 
-Click **Load Driver** and navigate to the CD where the Nutanix VirtIO is mounted.
+  When the console window opens, note that there are three actions available in the console (Send CTRL-ALT-DEL, Take Screen Capture, and Power).
 
-Browse the CD, and select the directory that corresponds to the Windows OS being installed.
+  Power On in the Actions menu changes to Power Off once the VM has been powered on. You can also click on the name of the VM to open a console window for a specific VM. This console window contains all of the options available under the Actions menu, performance-related information, and other relevant VM details.
 
-.. figure:: images/deploy_05.png
+.. figure:: images/manage_workloads_01.png
 
-.. figure:: images/deploy_06.png
+Prism Search
+............
 
-Select the three Nutanix drivers displayed (Press and hold the Ctrl key and select all three drivers):
+The Prism search function makes it easier to identify problems or find feature documentation in Prism Central. Use Prism Central’s search capabilities by typing a few search queries to see how easy this can make the tasks above.
 
-- Balloon
-- Ethernet adapter
-- SCSI passthrough controller
 
-.. figure:: images/deploy_07.png
+Suggestions:
 
-Click Next.
+- vm cpu > 1
+- vm mem > 2
+- vm iops
+- create vm
+- powered on
+- powered on cpu = 8
 
-After the drivers are loaded, the disk created in step 1 appears as an installation target. Select that disk and continue with the normal install process.
+In **Prism Central > :fa:`search`**.
 
-After the installation completes, the Windows install ISO can be unmounted and the additional CD-ROM used for the drivers can be removed from the VM.
+- Note the result types: Entity, Alerts, and Help.
+- Click the star icon to save a search.
+
+.. note::
+
+  The search hot key (a slash mark, or /) can be used from anywhere in the Prism Central UI to bring up the search function.
+
+Clone a VM
+..........
+
+In **Prism Central > Explore > VMs**.
+
+Find and clone four copies of the CentOS-base virtual machine.
+
+Select the VM, then click **Clone** from the **Actions** drop-down menu.
+
+Fill out the following fields and click **Save**:
+
+- **Number of Clones** - 4
+- **Prefix Name**  - Flow-*intials*-Clone
+- **Starting Index Number** - 1
+
+.. figure:: images/manage_workloads_02.png
+
+Leave them powered off. (They are used in the Optional Flow Lab)
+
+Migrate a VM Between Hosts
+..........................
+
+In **Prism Central > Explore > VMs**.
+
+Locate the Linux Vm from the previous lab (Linux_VM_*intials*).
+
+- If the VM is powered on, power it Off
+
+You should see that it has no entry in the **Host** column when it is powered off.
+
+Power on the VM, and make note of the **Hosts Name** in the **Host** column.
+
+.. figure:: images/manage_workloads_03.png
+
+Select the VM, then click **Migrate** from the **Actions** drop-down menu.
+
+You can either choose one of the other hosts in the cluster as a migration target for the VM, or accept the default and let AHV automatically select a location.
+
+Click **Migrate** to finalize the action.
+
+When the task completes, verify that your VM host location has changed from the host recorded above to the new location you selected.
+
+.. figure:: images/manage_workloads_04.png
+
+Configure VM-to-Host Affinity Policies
+......................................
+
+In **Prism Central > Explore > VMs**.
+
+Locate the Linux Vm from the previous lab (Linux_VM_*intials*).
+
+- If the VM is powered on, power it Off
+
+Select the VM, then click **Configure VM Host Affinity** from the **Actions** drop-down menu.
+
+Select one **Host** to which the VM can have affinity, and click Save to finish.
+
+Power On the VM, and verify it is on the **Host** you selected in the affinity policy.
+
+Select the VM, then click **Migrate** from the **Actions** drop-down menu.
+
+- This VM has host affinity set to host NTNXAHV-2. It cannot be migrated to any other host without setting the host affinity to that host.
+
+Click Cancel to exit migration.
+
+Select the VM, then click **Configure VM Host Affinity** from the **Actions** drop-down menu.
+
+Select another **Host** to which the VM can have affinity, and click Save to finish.
+
+Select the VM, then click **Migrate** from the **Actions** drop-down menu.
+
+- There is now a drop-down menu displaying the available hosts.
+
+Either select a host manually or allow AHV to select it, then click **Migrate**.
+
+You should see that the VM has moved to the other host.
+
+.. figure:: images/manage_workloads_05.png
 
 Takeaways
 +++++++++

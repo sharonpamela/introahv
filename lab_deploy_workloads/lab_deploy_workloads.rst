@@ -7,10 +7,10 @@ Lab - Deploying Workloads
 Overview
 ++++++++
 
-Learn about basic VM deployment and management.
+Learn about basic VM deployment.
 
 Image Configuration
-...................
++++++++++++++++++++
 
 We will upload a small Linux distro (Raspian OS) to use for deploying VMs.
 
