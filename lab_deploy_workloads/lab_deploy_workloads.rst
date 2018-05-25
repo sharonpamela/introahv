@@ -73,7 +73,7 @@ Creating a Windows VM
 
 Deploy a Windows VM from Prism Central.
 
-..note::
+.. note::
 
   Nutanix provides a set of guest tools and drivers comparable to VMware Tools. To install a Windows-based OS, the I/O drivers must be provided at install time. Nutanix provides a customized set of virtualized I/O drivers for Windows OS on AHV.
 
