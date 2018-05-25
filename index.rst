@@ -6,17 +6,18 @@
   :name: _technology_overview
   :hidden:
 
-  lab_nutanix_technology_overview/lab_nutanix_technology_overview
+  what_is_nutanix/what_is_nutanix
+  nutanix_terminology/nutanix_terminology
 
 .. toctree::
   :maxdepth: 2
-  :caption: Installing and Configuring
-  :name: _Installing_and_Configuring
+  :caption: Nutanix Configuration Labs
+  :name: _nutanix_configuration_labs
   :hidden:
 
-  lab_basic_configuration/lab_basic_configuration
-  lab_nutanix_data_handling/lab_nutanix_data_handling
-  lab_networking_with_ahv/lab_networking_with_ahv
+  lab_nutanix_tech_overview/lab_nutanix_tech_overview
+  lab_storage_configuration/lab_storage_configuration
+  lab_network_configuration/lab_network_configuration
 
 .. toctree::
   :maxdepth: 2
@@ -24,8 +25,10 @@
   :name: _deploying_and_managing_workloads
   :hidden:
 
-  lab_deploying_and_managing_workloads/lab_deploying_and_managing_workloads
-  lab_backup_and_dr_solutions/lab_backup_and_dr_solutions
+  backup_and_dr/backup_and_dr
+  lab_deploy_workloads/lab_deploy_workloads
+  lab_manage_workloads/lab_manage_workloads
+  lab_data_protection/lab_data_protection
 
 .. toctree::
   :maxdepth: 2
@@ -33,7 +36,19 @@
   :name: _monitoring_and_managing_the_environment
   :hidden:
 
-  lab_prism_features/lab_prism_features
+  monitoring_and_managing_env/monitoring_and_managing_env
+  lab_monitoring_env/lab_monitoring_env
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Optional Labs
+  :name: _optional_labs
+  :hidden:
+
+  authentication/authentication
+  ssp/ssp
+  flow/flow
+
 
 .. toctree::
   :maxdepth: 2
@@ -59,6 +74,26 @@ What's New
 
 - Workshop updated for the following software versions:
   - AOS 5.6
+
+Introductions
++++++++++++++
+
+- Name
+- Familiarity with Nutanix
+
+Initial Setup
++++++++++++++
+
+- Take note of the *Passwords* being used.
+- Log into your virtual desktops (connection info below)
+
+Agenda
+++++++
+
+- Nutanix Technology Overview
+- Nutanix Configuration Labs
+- Deploying and Managing Workloads
+- Monitoring and Managing the Environment
 
 Environment Details
 +++++++++++++++++++
