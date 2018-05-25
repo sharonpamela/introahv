@@ -36,7 +36,8 @@
   :name: _monitoring_and_managing_the_environment
   :hidden:
 
-  lab_prism_features/lab_prism_features
+  monitoring_and_managing_env/monitoring_and_managing_env
+  lab_monitoring_env/lab_monitoring_env
 
 .. toctree::
   :maxdepth: 2
@@ -85,13 +86,12 @@ Initial Setup
 
 - Take note of the *Passwords* being used.
 - Log into your virtual desktops (connection info below)
-- Start downloading the Linux ISO image for later use - http://vx2-downloads.raspberrypi.org/pixel_x86/images/pixel_x86-2016-12-13/2016-12-13-pixel-x86-jessie.iso
 
 Agenda
 ++++++
 
 - Nutanix Technology Overview
-- Installing and Configuring
+- Nutanix Configuration Labs
 - Deploying and Managing Workloads
 - Monitoring and Managing the Environment
 
