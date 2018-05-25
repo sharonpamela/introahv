@@ -21,7 +21,7 @@ Explore VM power actions and console access.
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux VM you created in the previous lab (Linux_VM_\*intials*). (Use Prism’s search function if necessary)
+Locate the Linux VM you created in the previous lab (Linux_VM_*intials*). (Use Prism’s search function if necessary)
 
 .. note::
 
@@ -96,7 +96,7 @@ Migrate a VM Between Hosts
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux Vm from the previous lab (Linux_VM_\*intials*).
+Locate the Linux Vm from the previous lab (Linux_VM_*intials*).
 
 - If the VM is powered on, power it Off
 
@@ -121,7 +121,7 @@ Configure VM-to-Host Affinity Policies
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux Vm from the previous lab (Linux_VM_\*intials*).
+Locate the Linux Vm from the previous lab (Linux_VM_*intials*).
 
 - If the VM is powered on, power it Off
 

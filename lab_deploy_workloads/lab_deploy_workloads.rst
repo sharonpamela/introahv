@@ -26,7 +26,7 @@ Fill out the following fields and click **Upload File**:
 
 Next, fill out the following fields and click **Save**:
 
-- **Image Name** - RasberryPI_\*intials*
+- **Image Name** - RasberryPI_*intials*
 - **Image Type** - ISO
 - **Image Description** - (Optional) Add a description
 
@@ -47,7 +47,7 @@ In **Prism Central > Explore > VMs**, click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Linux_VM_\*intials*
+- **Name** - Linux_VM_*intials*
 - **Description** - (Optional) Description for your VM.
 - **vCPU(s)** - 1
 - **Number of Cores per vCPU** - 1
@@ -58,7 +58,7 @@ Fill out the following fields and click **Save**:
 - Select **+ Add New Disk**
 - **Type** - DISK
 - **Operation** - Clone from Image Service
-- **Image** - RasberryPI_\*intials* (The Image we added above)
+- **Image** - RasberryPI_*intials* (The Image we added above)
 - **Storage Container** - Default Container
 - Select **Add**
 
@@ -81,7 +81,7 @@ In **Prism Central > Explore > VMs**, click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Windows_VM_\*intials*
+- **Name** - Windows_VM_*intials*
 - **Description** - (Optional) Description for your VM.
 - **vCPU(s)** - 2
 - **Number of Cores per vCPU** - 1
