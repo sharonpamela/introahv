@@ -65,7 +65,7 @@ Next click **User VM Interfaces**, then click **+ Create Network**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Network_*intials*
+- **Name** - Network-*intials*
 - **VLAN ID** - Something other than 0
 - **Enable IP Address Management** - unchecked
 
@@ -81,7 +81,7 @@ Create another network, but this time enable IPAM.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Network_IPAM_*intials*
+- **Name** - Network_IPAM-*intials*
 - **VLAN ID** - Something other than 0
 - **Enable IP Address Management** - Checked
 - **Network IP Address / Prefix Length** - 10.0.0.0/24
@@ -96,3 +96,6 @@ Fill out the following fields and click **Save**:
 
 Takeaways
 +++++++++
+
+- It's very easy to setup a network in the cluster in order to establish VM connectivity. 
+- IPAM is very simple to setup within a network and it can greatly simplify IP management within the cluster.

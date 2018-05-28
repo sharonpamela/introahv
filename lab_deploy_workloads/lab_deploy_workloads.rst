@@ -26,7 +26,7 @@ Fill out the following fields and click **Upload File**:
 
 Next, fill out the following fields and click **Save**:
 
-- **Image Name** - RasberryPI_*intials*
+- **Image Name** - RasberryPI-*intials*
 - **Image Type** - ISO
 - **Image Description** - (Optional) Add a description
 
@@ -47,7 +47,7 @@ In **Prism Central > Explore > VMs**, click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Linux_VM_*intials*
+- **Name** - Linux_VM-*intials*
 - **Description** - (Optional) Description for your VM.
 - **vCPU(s)** - 1
 - **Number of Cores per vCPU** - 1
@@ -58,7 +58,7 @@ Fill out the following fields and click **Save**:
 - Select **+ Add New Disk**
 - **Type** - DISK
 - **Operation** - Clone from Image Service
-- **Image** - RasberryPI_*intials* (The Image we added above)
+- **Image** - RasberryPI-*intials* (The Image we added above)
 - **Storage Container** - Default Container
 - Select **Add**
 
@@ -81,12 +81,12 @@ In **Prism Central > Explore > VMs**, click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Windows_VM_*intials*
+- **Name** - Windows_VM-*intials*
 - **Description** - (Optional) Description for your VM.
 - **vCPU(s)** - 2
 - **Number of Cores per vCPU** - 1
 - **Memory** - 4 GiB
-- Select **:fa:`pencil` ** next to CDROM
+- Select :fa:`pencil` next to CDROM
 - **Operation** - Clone from Image Service
 - **Image** - Windows VM ISO
 - Select **Update**
@@ -142,3 +142,6 @@ After the installation completes, the Windows install ISO can be unmounted and t
 
 Takeaways
 +++++++++
+
+- In this lab you saw how simple it is to deploy a Linux VM and a Windows VM.
+- The Image Configuration tool allows you to have a catalog of available images to be used in VM deployments as needed and covering a broad format support which includes qcow, qcow2, vmdk, VHD, VHDx, RAW, and ISO.

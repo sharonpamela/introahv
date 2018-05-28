@@ -21,7 +21,7 @@ Explore VM power actions and console access.
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux VM you created in the previous lab (Linux_VM_*intials*). (Use Prism’s search function if necessary)
+Locate the Linux VM you created in the previous lab (Linux_VM-*intials*). (Use Prism’s search function if necessary)
 
 .. note::
 
@@ -63,7 +63,7 @@ Suggestions:
 - powered on
 - powered on cpu = 8
 
-In **Prism Central > :fa:`search`**.
+In **Prism Central > :fa:`search` **.
 
 - Note the result types: Entity, Alerts, and Help.
 - Click the star icon to save a search.
@@ -84,19 +84,19 @@ Select the VM, then click **Clone** from the **Actions** drop-down menu.
 Fill out the following fields and click **Save**:
 
 - **Number of Clones** - 4
-- **Prefix Name**  - Flow-*intials*Clone
+- **Prefix Name**  - Flow-*intials*-Clone
 - **Starting Index Number** - 1
 
 .. figure:: images/manage_workloads_02.png
 
-Leave them powered off. (They are used in the Optional Flow Lab)
+Leave them powered off as they are used in the optional Flow Lab.
 
 Migrate a VM Between Hosts
 ..........................
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux Vm from the previous lab (Linux_VM_*intials*).
+Locate the Linux Vm from the previous lab (Linux_VM-*intials*).
 
 - If the VM is powered on, power it Off
 
@@ -121,7 +121,7 @@ Configure VM-to-Host Affinity Policies
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux Vm from the previous lab (Linux_VM_*intials*).
+Locate the Linux Vm from the previous lab (Linux_VM-*intials*).
 
 - If the VM is powered on, power it Off
 
@@ -135,7 +135,7 @@ Select the VM, then click **Migrate** from the **Actions** drop-down menu.
 
 - This VM has host affinity set to host NTNXAHV-2. It cannot be migrated to any other host without setting the host affinity to that host.
 
-Click Cancel to exit migration.
+Click **Cancel** to exit migration.
 
 Select the VM, then click **Configure VM Host Affinity** from the **Actions** drop-down menu.
 
@@ -153,3 +153,6 @@ You should see that the VM has moved to the other host.
 
 Takeaways
 +++++++++
+
+- In this lab you got to experience first hand how AHV provides a complete set of tools and actions that can be done manage the VMs in the cluster.
+- It is possible to register an ESXI cluster to Prism and be able to perform some of the basic VM management tasks right from Prism as well.
