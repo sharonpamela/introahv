@@ -12,6 +12,8 @@ Learn about basic VM deployment.
 Image Configuration
 +++++++++++++++++++
 
+Nutanix's Image Service is where you can store your build ISOs, as well as Disk Images you create (similar to VMware Templates).
+
 We will upload a small Linux distro (Raspian OS) to use for deploying VMs.
 
 In **Prism Central > Explore**, click **Images**.
