@@ -64,7 +64,7 @@
 Getting Started
 ---------------
 
-Welcome to the Nutanix Bootcamp! This workbook accompanies an instructor-led session that introduces Nutanix technologies and many common management tasks. Each chapter has a lesson and an exercise (called a “mission”) to give you hands-on practice. The instructor explains the missions and answers any additional questions that you may have. Each mission provides you with general steps to complete it. If you need more instruction, scroll down to the answers section of the particular mission to see the specific instructions. Some missions may be divided into tasks, and each task guides you through the steps to completion.
+Welcome to the Nutanix Technology Bootcamp! This workbook accompanies an instructor-led session that introduces Nutanix technologies and many common management tasks. Each section has a lesson and an exercise to give you hands-on practice. The instructor explains the exercises and answers any additional questions that you may have.
 
 At the end of the bootcamp, attendees should understand the basic concepts and technologies that make up the Nutanix Enterprise Cloud stack and should be well prepared for a hosted or onsite proof-of-concept (POC) engagement.
 

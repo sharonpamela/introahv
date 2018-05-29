@@ -9,18 +9,13 @@ Overview
 
 .. note::
 
-  Estimated time to complete: -- MINUTES
+  Estimated time to complete: 30-40 MINUTES
 
-In this exercise you will enable Nutanix Flow, formally known as Microsegmentation, and create the VMs to be used throughout the remaining Flow exercises.
+In this exercise you will enable Nutanix Flow, formally known as Microsegmentation, and create the VMs to be used throughout the remaining Flow exercises, **if you have not cloned the VMs already as part of the Lab - Deploying Workloads exercise**.
 
-In this task we will place a VM into quarantine and observe the behavior of the VM. We will also inspect the configurable options inside the quarantine policy.
+As part of this exercise, you will place a VM into quarantine and observe the behavior of the VM. You will also inspect the configurable options inside the quarantine policy and create a category with different values. Then you will create and implement an isolation security policy that uses the newly created category in order to restrict unauthorized access.
 
-In this exercise you will create a category with different values. Then you will create and implement an isolation security policy that uses the newly created category in order to restrict unauthorized access.
-
-In this exercise you will create an application category named **app-abc**. You will assign the **AppType: app-abc** category to our application VM, which in this example is the **flow-abc-5** VM. Finally you will create a security policy to restrict the application VM from receiving ICMP ping requests from VMs outside of the **programs-abc: sales-abc** category.
-
-The previous exercise, Secure Applications with Microsegmentation, you created an application policy, **Protect-app-abc**,  which allowed all traffic in monitor mode. This can be combined with visualization to detect unexpected traffic flows and add them to the policy if desired.
-In this exercise you will use a policy in monitor mode to add detected traffic flows to the policy.
+Finally, you will create an application category named **app-abc**, assign the **AppType: app-abc** category to your application VM, which in this exercise is the **flow-abc-5** VM, and create a security policy to restrict the application VM from receiving ICMP ping requests from VMs outside of the **programs-abc: sales-abc** category.
 
 Enabling Microsegmentation
 ++++++++++++++++++++++++++
@@ -46,6 +41,10 @@ Click **Enable**
 
 Create Five VMs
 +++++++++++++++
+
+.. note::
+
+  Skip this VM creation section if you have already created the Flow VMs as part of the Lab - Deploying Workloads exercise.
 
 Now you will create the **five** virtual machines you will use to test the capabilities of Nutanix Flow. Create these virtual machines from the base VM in Prism Central called CentOS.
 
@@ -89,7 +88,7 @@ Select the **flow-<your_initials>-1** VM and click **Actions > Clone**.
 
 Select the five newly created Flow VMs and click **Actions > Power on**.
 
-.. figure:: images/flow_vms.png
+.. figure:: images/flow_vms_2.png
 
 Quarantine a VM and Explore the Quarantine Policy
 +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -156,8 +155,8 @@ Fill out the following fields and click **Save**:
 
 - **Name** - Programs-abc, replacing abc with your initials.
 - **Purpose** - This category will be used to tag VMs belonging to the program called "Programs-abc", as an example. This category will have "intern" and "sales" values in order to differentiate intern and sales VMs within the **programs-abc** category.
-- **Values** - interns-abc
-- **Values** - sales-abc
+- **Values** - interns-abc.
+- **Values** - sales-abc.
 
 .. figure:: images/create_category.png
 
@@ -172,8 +171,8 @@ Fill out the following fields and click **Apply Now**:
 
 - **Name** - isolate-interns-sales-abc, replacing abc with your initials.
 - **Purpose** - Isolate intern vm traffic from sales.
-- **Isolate This Category** - programs-abc:interns-abc
-- **From This Category** - programs-abc:sales-abc
+- **Isolate This Category** - programs-abc:interns-abc.
+- **From This Category** - programs-abc:sales-abc.
 Do NOT select the check box for **Apply the isolation only within a subset of the data center**.
 
 •	Enter interns-abc as a possible value of this category, replacing abc with your initials.
@@ -277,7 +276,7 @@ Fill out the following fields and click **Next**:
 
 - **Name** - Protect-app-abc, replacing abc with your initials.
 - **Purpose** - Protect app-abc from ICMP outside of sales VMs.
-- **Secure this app** - AppType: app-abc
+- **Secure this app** - AppType: app-abc.
 Do NOT select the check box for the option **Filter the app type by category**.
 
 .. figure:: images/create_app_vm_sec_pol.png
@@ -377,7 +376,7 @@ Confirm that **Environment: Dev** shows in blue as an allowed source.
 
 Attempt to send traffic from another source such as **flow-abc-2** to **flow-abc-5**.
 
-Is this traffic blocked
+Is this traffic blocked?
 
 Takeaways
 +++++++++
@@ -387,8 +386,8 @@ Takeaways
 - Once Microsegmentation is enabled in the cluster, VMs can be easily protected through Security Policies as created in the Prism Central UI. These function as labels that can easily be applied to VMs without any additional network setup.
 - In this exercise you utilized Flow to quarantine a VM in the environment using the two modalities of the quarantine policy, which are strict and forensic.
 - The forensic modality is key in allowing you to study the connection patterns into and out of a VM in order to establish which connections are allowed or denied while the VM is quarantined.
-- In this exercise you created categories and an isolation security policy with ease without having to alter or change any networking configuration.
-- After tagging the VMs with the categories created, the VMs simply behaved according to the policies they belong to. x
-- In this exercise you created a category to protect a special application VM. Then you created the security policy to restrict ICMP traffic into that application VM.
+- In this exercise you also created categories and an isolation security policy with ease without having to alter or change any networking configuration.
+- After tagging the VMs with the categories created, the VMs simply behaved according to the policies they belong to.
+- You also created a category to protect a special application VM. Then you created the security policy to restrict ICMP traffic into that application VM.
 - Notice that the policy created is in **Save and Monitor** mode, which means traffic is not actually going to get blocked yet until the policy is applied. This is helpful in order to study the connections and ensure no true traffic is getting blocked unintentionally.
 - Flow visualization allows you to visualize the flows that are occurring within a policy. From there it's really easy to edit the policy in order to add or remove the flows that should or should not be occurring.
