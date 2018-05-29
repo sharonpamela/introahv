@@ -57,7 +57,6 @@
   :hidden:
 
   appendix/glossary
-  appendix/otherstuff
 
 .. _getting_started:
 

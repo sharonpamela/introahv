@@ -109,7 +109,7 @@ Review the UI navigation options.
 
 Examine the cluster hardware by using the navigation menu, and go to the Hardware.
 
-In **Prism > Hardware**, click ** Hardware**, then click **Diagram**.
+In **Prism > Hardware**, click **Hardware**, then click **Diagram**.
 
 Review the hardware summary information:
 
