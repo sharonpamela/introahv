@@ -19,7 +19,7 @@ Nutanix Web-Scale Architecture
 
 Nutanix is built on Web-Scale Architecture
 
-.. figure:: images/what_is_nutanix_02-2.png
+.. figure:: images/what_is_nutanix_02.png
 
 The Nutanix Solution
 ....................
