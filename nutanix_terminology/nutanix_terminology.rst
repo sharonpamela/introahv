@@ -105,7 +105,7 @@ Performance and Availability
 - Data is read locally
 - Remote access only if data is not locally present
 
-.. figure:: images/nutanix_terminology_08.png
+.. Image for ReadIO images/nutanix_terminology_08.png
 
 Anatomy of a Write I/O
 ......................
@@ -116,7 +116,7 @@ Performance and Availability
 - Replicated on other nodes for high availability
 - Replicas are spread across cluster for high performance
 
-.. figure:: images/nutanix_terminology_09.png
+.. Image for WriteIO images/nutanix_terminology_09.png
 
 CVM Auto-Pathing
 ................

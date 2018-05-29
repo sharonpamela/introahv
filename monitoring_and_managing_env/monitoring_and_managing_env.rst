@@ -8,9 +8,7 @@ the Environment
 Monitoring and Managing the Environment
 +++++++++++++++++++++++++++++++++++++++
 
-Now we have our Nutanix cluster configured, and workloads deployed and protected.
-
-Now we can look at how we monitor and manage our Nutanix cluster.
+Now that we have our Nutanix cluster configured and the workloads are deployed and protected, we can learn about how to monitor and manage our Nutanix cluster.
 
 One-Click Cluster Upgrade
 .........................

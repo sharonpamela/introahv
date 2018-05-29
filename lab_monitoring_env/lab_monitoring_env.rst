@@ -99,9 +99,9 @@ Next, fill out the following fields and click **Add Workload**:
 
 Repeat this process, adding workloads until the runway falls short of the six-month target.
 
-Save this scenario.
+**Save** this scenario.
 
-Note the Resources section, which shows the existing hardware.
+Note the **Resources** section, which shows the existing hardware.
 
 Click **Recommend** to see a suggested NX configuration to extend the runway.
 
@@ -115,7 +115,7 @@ Generate a PDF report to see detailed capacity planning information.
 Bonus Round: Create a Custom Report
 ...................................
 
-To create a new custom report from scratch, click the plus sign beside Actions, then add the desired metrics from the pane on the left side.
+To create a new custom report from scratch, click the plus sign beside **Actions**, then add the desired metrics from the pane on the left side.
 
 Once you have saved the custom report, you can run it just as you would run any other report.
 
@@ -123,3 +123,8 @@ To set a report to run automatically, add a schedule to it.
 
 Takeaways
 +++++++++
+
+- The Prism Central report management feature provides you with an ability to configure and deliver the historical reports containing information about the infrastructure resources straight into your mailbox according to the schedules configured.
+- The Capacity Runway view in the Planning dashboard allows you to view summary resource runway information for the registered clusters and access detailed runway information about each cluster.
+- The Scenarios view in the Planning dashboard allows you to create "what if" scenarios to assess the future resource requirements for potential work loads that you specify.
+- You must have a Prism Pro license to use the resource planning tools.

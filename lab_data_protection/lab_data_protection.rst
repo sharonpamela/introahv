@@ -21,7 +21,7 @@ Create a VM snapshot and restore a VM from a snapshot.
 
 In **Prism Element > VM**, click **VM**, then click **Table**.
 
-Locate the Linux VM you created in the previous lab (Linux_VM_*intials*).
+Locate the Linux VM you created in the previous lab (Linux_VM-*intials*).
 
 - If the VM is powered on, power it Off
 
@@ -35,7 +35,7 @@ Click **Snapshots** to see your snapshot.
 
 - Note the four available actions (Details, Clone, Restore, and Delete).
 
-Click Details to see all of the VM’s properties at the time of the snapshot.
+Click **Details** to see all of the VM’s properties at the time of the snapshot.
 
 Now lets break our VM.
 
@@ -98,3 +98,7 @@ Click **Close** to exit.
 
 Takeaways
 +++++++++
+
+- Nutanix offers data protection solutions for virtual datacenters via different strategies including one-to-one or one-to-many replication.
+- Nutanix provides data protection functions at the VM, file, and volume group level, so VMs and data remain safe in a crash-consistent environment.
+- You can implement a data protection strategy by configuring protection domains and remote sites through the web console.

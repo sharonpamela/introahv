@@ -17,13 +17,13 @@ Configure Storage Containers
 
 **Containers** are software-defined, logical constructs for managing storage policy that greatly simplify storage management. Containers are similar to datastores in ESXi.
 
-Let's use Prism to perform a basic container setup.
+Let's use Prism Element to perform a basic container setup.
 
 In **Prism > Storage**, click **Storage**, click **Table**, then click **+ Storage Container**.
 
-Use the following specifications (with **Advance Settings**), and click **Save*:
+Use the following specifications (with **Advance Settings**), and click **Save**:
 
-- **Name** - container_*intials*
+- **Name** - container-*intials*
 - **Advertised Capacity** - 5 GiB
 - **Compression** - Enabled (inline 0 mins)
 - **Deduplication** - Cache Only
@@ -54,7 +54,7 @@ You can locate the redundancy level of containers and the cluster within Prism, 
 
 In **Prism > Home**, click the **green OK** in the Data Resiliency Status box. This opens the Data Resiliency Status window.
 
-You can change the **RF** of a cluster in Prism Element and click Redundancy Factor Readiness in the menu. This is where you change the redundancy factor of the cluster.
+The RF of a cluster in Prism Element could be configured by clicking **Redundancy Factor Readiness** in the Gear menu.
 
 .. note::
 

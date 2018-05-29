@@ -45,7 +45,7 @@ Review the other sections, and do a quick walk through:
 - Analysis
 - Apps (We will configure this later in the workshop)
 - Alerts
-- Tasks :fa:`dot-circle`
+- Tasks :fa:`circle-o`
 - Search :fa:`search`
 - Help :fa:`question`
 - Configuration :fa:`cog`
@@ -73,7 +73,7 @@ In **Prism Central > Explore**, click **VMs** on left-hand menu.
 
 What page would show you the latest activity in the system? On this page, you can monitor the progress of any task and keep track of what has been done in the past using time stamps. Can you figure out two different ways to get there?
 
-First Way, In **Prism Central > Home**, click **View All Tasks**. Second Way, click :fa:`dot-circle`
+First Way, In **Prism Central > Home**, click **View All Tasks**. Second Way, click :fa:`circle-o`
 
 Prism Element
 +++++++++++++
@@ -135,7 +135,7 @@ Review other sections of the Prism UI
 
 - Health :fa:`heartbeat`
 - Alarms :fa:`bell`
-- Tasks :fa:`dot-circle`
+- Tasks :fa:`circle-o`
 - Search :fa:`search`
 - Help :fa:`question`
 - Configuration :fa:`cog`
@@ -169,7 +169,7 @@ What page would show you the latest activity in the system? On this page, you ca
 
 .. figure:: images/nutanix_tech_overview_09.png
 
-First Way, In **Prism > Tasks**, click **Tasks**. Second Way, click :fa:`dot-circle`.
+First Way, In **Prism > Tasks**, click **Tasks**. Second Way, click :fa:`circle-o`.
 
 Takeaways
 +++++++++
