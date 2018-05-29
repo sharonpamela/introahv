@@ -60,7 +60,7 @@ The RF of a cluster in Prism Element could be configured by clicking **Redundanc
 
   For this exercise, please leave the redundancy factor configured as 2.
 
-In **Prism > :fa:`cog\`**, click **Redundancy Factor Readiness**.
+In **Prism >** :fa:`cog`, click **Redundancy Factor Readiness**.
 
 Takeaways
 +++++++++
