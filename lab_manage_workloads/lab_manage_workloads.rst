@@ -63,7 +63,7 @@ Suggestions:
 - powered on
 - powered on cpu = 8
 
-In **Prism Central > :fa:`search` ** .
+In **Prism Central > :fa:`search\`** .
 
 - Note the result types: Entity, Alerts, and Help.
 - Click the star icon to save a search.
