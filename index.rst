@@ -47,6 +47,7 @@
 
   authentication/authentication
   ssp/ssp
+  calm/calm
   flow/flow
 
 
@@ -57,6 +58,7 @@
   :hidden:
 
   appendix/glossary
+  appendix/basics
 
 .. _getting_started:
 
