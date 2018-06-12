@@ -61,7 +61,7 @@ Connect to Prism Central and create a network for user VM interfaces. Use any VL
 
 In **Prism Central > Explore**, click **VMs**, then click **Network Config**
 
-Next click **User VM Interfaces**, then click **+ Create Network**.
+Next click **VM Networks**, then click **+ Create Network**.
 
 Fill out the following fields and click **Save**:
 
@@ -97,5 +97,5 @@ Fill out the following fields and click **Save**:
 Takeaways
 +++++++++
 
-- It's very easy to setup a network in the cluster in order to establish VM connectivity. 
+- It's very easy to setup a network in the cluster in order to establish VM connectivity.
 - IPAM is very simple to setup within a network and it can greatly simplify IP management within the cluster.

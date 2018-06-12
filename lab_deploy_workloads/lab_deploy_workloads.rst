@@ -70,6 +70,8 @@ Fill out the following fields and click **Save**:
 - **VLAN Name** - Primary
 - Select **Add**
 
+Click **Save** to create the VM.
+
 Creating a Windows VM
 +++++++++++++++++++++
 
@@ -109,6 +111,8 @@ Fill out the following fields and click **Save**:
 - Select **Add New NIC**
 - **VLAN Name** - Primary
 - Select **Add**
+
+Click **Save** to create the VM.
 
 Now lets power on the VM:
 
