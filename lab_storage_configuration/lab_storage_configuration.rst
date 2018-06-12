@@ -54,13 +54,13 @@ You can locate the redundancy level of containers and the cluster within Prism, 
 
 In **Prism > Home**, click the **green OK** in the Data Resiliency Status box. This opens the Data Resiliency Status window.
 
-The RF of a cluster in Prism Element could be configured by clicking **Redundancy Factor Readiness** in the Gear menu.
+The RF of a cluster in Prism Element could be configured by clicking **Redundancy State** in the Gear menu.
 
 .. note::
 
   For this exercise, please leave the redundancy factor configured as 2.
 
-In **Prism >** :fa:`cog`, click **Redundancy Factor Readiness**.
+In **Prism >** :fa:`cog`, click **Redundancy State**.
 
 Takeaways
 +++++++++
