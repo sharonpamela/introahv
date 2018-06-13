@@ -28,7 +28,7 @@ Fill out the following fields and click **Upload File**:
 
 Next, fill out the following fields and click **Save**:
 
-- **Image Name** - RasberryPI-*intials*
+- **Image Name** - RaspberryPI-*intials*
 - **Image Type** - ISO
 - **Image Description** - (Optional) Add a description
 
@@ -60,7 +60,7 @@ Fill out the following fields and click **Save**:
 - Select **+ Add New Disk**
 - **Type** - DISK
 - **Operation** - Clone from Image Service
-- **Image** - RasberryPI-*intials* (The Image we added above)
+- **Image** - RaspberryPI-*intials* (The Image we added above)
 - **Storage Container** - Default Container
 - Select **Add**
 
