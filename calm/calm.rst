@@ -44,7 +44,7 @@ Click **+ Add Admins**. Fill out the following fields:
 - **Name** - SSP Admins
 - **Default Cluster** - *<Cluster Name>*
 
-Under **Network**, select the **Primary** and **Secondary** networks. Select :fa:`star` for the **Primary** network to make it the default virtual network for VMs in the **Calm** project.
+Under **Network**, select the **Primary** and if available, the **Secondary** networks. Select :fa:`star` for the **Primary** network to make it the default virtual network for VMs in the **Calm** project.
 
 Click **Next**.
 
@@ -64,7 +64,7 @@ Following successful completion of the **Enable App Management** task, refresh t
 
 .. figure:: images/enable5.png
 
-.. note:: Starting Calm services for the first time can take ~2 minutes. If the Calm UI doesn't load immediately, wait a moment and try refreshing the browser again.
+.. note:: Starting Calm services for the first time can take ~6 minutes. If the Calm UI doesn't load immediately, wait a moment and try refreshing the browser again.
 
 .. note about possibly needing to SSH into PC VM to do 'cluster start' if Epsilon service doesn't start on its own
 
@@ -80,14 +80,7 @@ Select |proj-icon| **Projects** from the sidebar.
 Fill out the following fields:
 
 - **Project Name** - Calm
-- **Select which resources you want this project to consume** - Local only
-- **AHV Cluster** - *<Cluster Name>*
-
-Fill out the following fields:
-
-- **Project Name** - Calm
 - **Description** - Calm
-- **AHV Cluster** - *<Nutanix Cluster Name>*
 
 Under **Users, Groups, and Roles**, click **+ User**.
 
@@ -111,7 +104,11 @@ Click **+ User**, fill out the following fields and click **Save**:
 - **Name** - SSP Basic Users
 - **Role** - Operator
 
-Under **Network**, select the **Primary** and **Secondary** networks. Select :fa:`star` for the **Primary** network to make it the default virtual network for VMs in the **Calm** project.
+Under **Infrastructure**, fill out the following fields:
+- **Select which resources you want this project to consume** - Local only
+- **AHV Cluster** - *<Cluster Name>*
+
+Under **Network**, select the **Primary** and if available, the **Secondary** networks. Select :fa:`star` for the **Primary** network to make it the default virtual network for VMs in the **Calm** project.
 
 Click **Save**.
 
@@ -131,11 +128,13 @@ Creating Blueprint
 
 From **Prism Central > Apps**, select **Blueprints** from the sidebar and click **+ Create Application Blueprint**.
 
+Specify **CalmIntro<INITIALS>** in the **Blueprint Name** field.
+Enter a **Description** in the Description field.
 Select **Calm** from the **Project** drop down menu and click **Proceed**.
 
-Specify **CalmIntro<INITIALS>** in the **Name this Blueprint** field.
+Click **Proceed** to continue.
 
-Click **Credentials >** :fa:`plus-circle` and fill out the following fields:
+Click **Credentials >** :fa:`plus-circle` and fill out the following fields then click **Save**:
 
 - **Credential Name** - CENTOS
 - **Username** - root
@@ -193,7 +192,7 @@ Fill out the following fields:
 
 - **Cloud** - Nutanix
 - **OS** - Linux
-- **VM Name** - MYSQL
+- **VM Name** - MYSQL-@@{calm_array_index}@@-@@{calm_time}@@
 - **Image** - CentOS
 - **Device Type** - Disk
 - **Device Bus** - SCSI
@@ -202,22 +201,26 @@ Fill out the following fields:
 - **Cores per vCPU** - 1
 - **Memory (GiB)** - 4
 - Select :fa:`plus-circle` under **Network Adapters (NICs)**
-- **NIC** - Secondary
+- **NIC** - Primary
 - **Credential** - CENTOS
 
 .. note::
 
   Ensure selecting the **Credential** is the final selection made before proceeding to the next step, selecting other fields can clear your **Credential** selection.
 
-Scroll to the top of the **Configuration Panel**, click **Package**.
+With the MySQL service icon selected in the workspace window, scroll to the top of the **Configuration Panel**, click **Package**.
 
 Fill out the following fields:
 
-- **Name** - MYSQL_PACKAGE
-- **Install Script Type** - Shell
+- **Package Name** - MYSQL_PACKAGE
+- **Click** - Configure install
+- **Click** - + Task
+- **Name Task** - Install_sql
+- **Type** - Execute
+- **Script Type** - Shell
 - **Credential** - CENTOS
 
-Copy and paste the following script into the **Install Script** field:
+Copy and paste the following script into the **Script** field:
 
 .. code-block:: bash
 
@@ -260,12 +263,16 @@ Copy and paste the following script into the **Install Script** field:
 
   Looking at the script you can see the package will install MySQL, configure the credentials and create a database based on the variables specified earlier in the exercise.
 
-Fill out the following fields:
+Select the MySQL service icon in the workspace window again and scroll to the top of the **Configuration Panel**, click **Package**.
 
-- **Uninstall Script Type** - Shell
+- **Click** - Configure Uninstall
+- **Click** - + Task
+- **Name Task** - Uninstall_sql
+- **Type** - Execute
+- **Script Type** - Shell
 - **Credential** - CENTOS
 
-Copy and paste the following script into the **Uninstall Script** field:
+Copy and paste the following script into the **Script** field:
 
 .. code-block:: bash
 
@@ -313,13 +320,13 @@ In **Application Overview > Services**, click :fa:`plus-circle`.
 
 Note **Service1** appears in the **Workspace** and the **Configuration Pane** reflects the configuration of the selected Service. You can rearrange the Service icons on the Workspace by clicking and dragging them.
 
-Fill out the following fields:
+With the Apache service icon selected in the workspace window, scroll to the top of the **Configuration Panel**, click **Package**.
 
 - **Service Name** - APACHE_PHP
 - **Name** - APACHE_PHP_AHV
 - **Cloud** - Nutanix
 - **OS** - Linux
-- **VM Name** - APACHE_PHP
+- **VM Name** - APACHE_PHP-@@{calm_array_index}@@-@@{calm_time}@@
 - **Image** - CentOS
 - **Device Type** - Disk
 - **Device Bus** - SCSI
@@ -328,18 +335,23 @@ Fill out the following fields:
 - **Cores per vCPU** - 1
 - **Memory (GiB)** - 4
 - Select :fa:`plus-circle` under **Network Adapters (NICs)**
-- **NIC** - Secondary
+- **NIC** - Primary
 - **Credential** - CENTOS
 
 Scroll to the top of the **Configuration Panel**, click **Package**.
 
-Fill out the following fields:
+Click on the Apache service icon again and fill out the following fields:
 
-- **Name** - APACHE_PHP_PACKAGE
-- **Install Script Type** - Shell
+- **Package Name** - APACHE_PHP_PACKAGE
+- **Click** - Configure install
+- **Click** - + Task
+- **Name Task** - Install_Apache
+- **Type** - Execute
+- **Script Type** - Shell
 - **Credential** - CENTOS
 
-Copy and paste the following script into the **Install Script** field:
+
+Copy and paste the following script into the **Script** field:
 
 .. code-block:: bash
 
@@ -361,17 +373,27 @@ Copy and paste the following script into the **Install Script** field:
   sudo systemctl restart httpd
   sudo systemctl enable httpd
 
+.. code-block:: bash
+
+Select the Apache service icon in the workspace window again and scroll to the top of the **Configuration Panel**, click **Package**.
+
 Fill out the following fields:
 
-- **Uninstall Script Type** - Shell
+- **Click** - Configure uninstall
+- **Click** - + Task
+- **Name Task** - Uninstall_apache
+- **Type** - Execute
+- **Script Type** - Shell
 - **Credential** - CENTOS
 
-Copy and paste the following script into the **Uninstall Script** field:
+Copy and paste the following script into the **Script** field:
 
 .. code-block:: bash
 
   #!/bin/bash
   echo "Goodbye!"
+
+.. code-block:: bash
 
 Click **Save**.
 
@@ -386,10 +408,6 @@ Select the **MySQL** Service. This will hold the execution of **APACHE_PHP** ins
 
 Click **Save**.
 
-In **Application Overview > Actions**, select **Create** to see the flow of execution after the dependency is added.
-
-.. figure:: images/lamp2.png
-
 Adding Replicas
 ...............
 
@@ -399,7 +417,7 @@ In the **Workspace**, select the **APACHE_PHP** Service.
 
 In the **Configuration Pane**, select the **Service** tab.
 
-Under **Deployment Config**, change the **Number of replicas** from 1 to 2.
+Under **Deployment Config**, change the **Max** Number of replicas from 1 to 2.
 
 Creating the Load Balancer
 ..........................
@@ -423,18 +441,22 @@ Select **Service1** and fill out the following fields in the **Configuration Pan
 - **Cores per vCPU** - 1
 - **Memory (GiB)** - 4
 - Select :fa:`plus-circle` under **Network Adapters (NICs)**
-- **NIC** - Secondary
+- **NIC** - Primary
 - **Credential** - CENTOS
 
 Scroll to the top of the **Configuration Panel**, click **Package**.
 
 Fill out the following fields:
 
-- **Name** - HAPROXY_PACKAGE
-- **Install Script Type** - Shell
+- **Package Name** - HAPROXY_PACKAGE
+- **Click** - Configure install
+- **Click** - + Task
+- **Name Task** - install_haproxy
+- **Type** - Execute
+- **Script Type** - Shell
 - **Credential** - CENTOS
 
-Copy and paste the following script into the **Install Script** field:
+Copy and paste the following script into the **Script** field:
 
 .. code-block:: bash
 
@@ -498,17 +520,27 @@ Copy and paste the following script into the **Install Script** field:
   sudo systemctl enable haproxy
   sudo systemctl restart haproxy
 
+.. code-block:: bash
+
+Select the HAProxy service icon in the workspace window again and scroll to the top of the **Configuration Panel**, click **Package**.
+
 Fill out the following fields:
 
-- **Uninstall Script Type** - Shell
+- **Click** - Configure install
+- **Click** - + Task
+- **Name Task** - uninstall_haproxy
+- **Type** - Execute
+- **Script Type** - Shell
 - **Credential** - CENTOS
 
-Copy and paste the following script into the **Uninstall Script** field:
+Copy and paste the following script into the **Script** field:
 
 .. code-block:: bash
 
   #!/bin/bash
   echo "Goodbye!"
+
+.. code-block:: bash
 
 Click **Save**.
 
@@ -592,7 +624,7 @@ Fill out the following fields and click **Back**:
 Select the **Mongo_ConfigSet** Service and make the following changes in the **Configuration Pane**:
 
 - Update the **VM Configuration > Image** to **CentOS**.
-- Update the **Network Adapters > NIC** to **Secondary**.
+- Update the **Network Adapters > NIC** to **Primary**.
 - Update the **Connection > Credential** to **CENTOS**.
 
 Repeat these steps for the **Mongo_Router** and **Mongo_ReplicaSet** Services.
@@ -625,7 +657,13 @@ Click **Publish**.
 
 .. figure:: images/marketplace_p2_2.png
 
-Provide a **Name** (e.g. Blueprint Name *<INITIALS>*) and **Description**, and click **Publish**.
+Provide the following details:
+- **Name** (e.g. Blueprint Name *<INITIALS>*)
+- **Publish as a** - New Marketplace blueprint
+- **Initial Version** - 1.0.0
+- **Description** - Finished MySQL app
+
+Click **Submit for Approval**.
 
 .. figure:: images/marketplace_p2_3.png
 
@@ -681,15 +719,27 @@ Select the Project **Name** associated with your Blueprint at the time of publis
 
 Select the **Environment** tab.
 
-Under **Network Adapters (NICs)**, click :fa:`plus-circle` and select **Secondary**.
-
-Under **Connection > Credential**, select **Add New Credential**. Fill out the following fields and click **Done**:
+Under **Credential**, click :fa:`plus-circle` to add new credential.
+Fill out the following fields:
 
 - **Credential Name** - CENTOS
 - **Username** - root
 - **Secret** - Password
 - **Password** - nutanix/4u
 - Select **Use as default**
+
+
+Under **VM Configuration**
+- select **AHV on NUTANIX**.
+- **VM Name** - add prefix "default" to the name
+- **Image** - CentOS
+- **vCPUs** - 2
+- **Cores per vCPU** - 1
+- **Memory** - 4GiB
+.. figure:: images/marketplace_p2_010.png
+
+
+Under **Network Adapters (NICs)**, click :fa:`plus-circle` and select **Primary**.
 
 .. figure:: images/marketplace_p2_10.png
 

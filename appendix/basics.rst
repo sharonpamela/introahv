@@ -11,7 +11,7 @@ Open \https://<*Prism-Central-IP*>:9440/ in a browser and log in.
 
 From the navigation bar, select **Apps**.
 
-Calm will default to the **Applications** tab, showing all instances of applications that have been launched from a Blueprint.
+The **Applications** tab shows all of the instances of applications that have been launched from a Blueprint.
 
 Tabbed Navigation
 =================
