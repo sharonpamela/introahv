@@ -14,7 +14,7 @@ Image Configuration
 
 Nutanix's Image Service is where you can store your build ISOs, as well as Disk Images you create (similar to VMware Templates).
 
-We will upload a small Linux distro (Raspian OS) to use for deploying VMs.
+We will upload CentOS ISO to use for deploying VMs.
 
 In **Prism Central > Explore**, click **Images**.
 
@@ -22,17 +22,31 @@ Next click **Add Image**, and click **URL**.
 
 Fill out the following fields and click **Upload File**:
 
-- **Enter Image URL** - http://vx2-downloads.raspberrypi.org/pixel_x86/images/pixel_x86-2016-12-13/2016-12-13-pixel-x86-jessie.iso
+- **Enter Image URL** - http://10.20.134.222/images/CentOS-7-x86_64-Minimal-1804.iso
 
 .. figure:: images/deploy_workloads_01.png
 
 Next, fill out the following fields and click **Save**:
 
-- **Image Name** - RaspberryPI-*intials*
+- **Image Name** - CentOS7-*intials*
 - **Image Type** - ISO
 - **Image Description** - (Optional) Add a description
 
 .. figure:: images/deploy_workloads_02.png
+
+Now we will upload Windows 2012 ISO to use for deploying VMs.
+
+Next click **Add Image**, and click **URL**.
+
+Fill out the following fields and click **Upload File**:
+
+- **Enter Image URL** - http://10.20.134.222/images/server_2012_r2_vl_x64_dvd_3319595.iso
+
+Next, fill out the following fields and click **Save**:
+
+- **Image Name** - Windows2012-*intials*
+- **Image Type** - ISO
+- **Image Description** - (Optional) Add a description
 
 .. note::
 
@@ -57,18 +71,23 @@ Fill out the following fields and click **Save**:
 
 .. figure:: images/deploy_workloads_03.png
 
-- Select **+ Add New Disk**
-- **Type** - DISK
-- **Operation** - Clone from Image Service
-- **Image** - RaspberryPI-*intials* (The Image we added above)
-- **Storage Container** - Default Container
-- Select **Add**
+- Select :fa:`pencil` next to CDROM
+    - **Operation** - Clone from Image Service
+    - **Image** - CentOS7-*intials* (The Image we added above)
+    - Select **Update**
 
 .. figure:: images/deploy_workloads_04.png
 
+- Select **+ Add New Disk**
+    - **Type** - DISK
+    - **Operation** - Allocate on Storage Container
+    - **Storage Container** - Default Container
+    - **Size (GiB)** - 30 GiB
+    - Select **Add**
+
 - Select **Add New NIC**
-- **VLAN Name** - Primary
-- Select **Add**
+    - **VLAN Name** - Primary
+    - Select **Add**
 
 Click **Save** to create the VM.
 
@@ -91,26 +110,26 @@ Fill out the following fields and click **Save**:
 - **Number of Cores per vCPU** - 1
 - **Memory** - 4 GiB
 - Select :fa:`pencil` next to CDROM
-- **Operation** - Clone from Image Service
-- **Image** - Windows VM ISO
-- Select **Update**
+    - **Operation** - Clone from Image Service
+    - **Image** - Windows2012-*intials*
+    - Select **Update**
 
 - Select **+ Add New Disk**
-- **Type** - DISK
-- **Operation** - Allocate on Storage Container
-- **Storage Container** - Default Container
-- **Size (GiB)** - 30 GiB
-- Select **Add**
+    - **Type** - DISK
+    - **Operation** - Allocate on Storage Container
+    - **Storage Container** - Default Container
+    - **Size (GiB)** - 30 GiB
+    - Select **Add**
 
 - Select **+ Add New Disk**
-- **Type** - CDROM
-- **Operation** - Clone from Image Service
-- **Image** - Nutanix VirtIO
-- Select **Add**
+    - **Type** - CDROM
+    - **Operation** - Clone from Image Service
+    - **Image** - Nutanix VirtIO
+    - Select **Add**
 
 - Select **Add New NIC**
-- **VLAN Name** - Primary
-- Select **Add**
+    - **VLAN Name** - Primary
+      - Select **Add**
 
 Click **Save** to create the VM.
 
@@ -145,6 +164,14 @@ Click Next.
 After the drivers are loaded, the disk created in step 1 appears as an installation target. Select that disk and continue with the normal install process.
 
 After the installation completes, the Windows install ISO can be unmounted and the additional CD-ROM used for the drivers can be removed from the VM.
+
+.. note::
+
+  In ESX:
+
+  - After a VM is created via Prism, it appears in the VMware vSphere UI. An example is shown in the image below.
+  - Alternatively, if a VM is created via VMware vSphere, it appears in the Prism VMs list.
+
 
 Takeaways
 +++++++++

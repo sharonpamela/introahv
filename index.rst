@@ -74,8 +74,21 @@ What's New
 ++++++++++
 
 - Workshop updated for the following software versions:
-  - AOS 5.6
-  - PC 5.7.1
+    - AOS 5.6
+    - PC 5.7.1
+
+- Optional Lab Updates:
+    - Calm
+    - Flow
+
+Agenda
+++++++
+
+- Introductions
+- Nutanix Technology Overview
+- Nutanix Configuration Labs
+- Deploying and Managing Workloads
+- Monitoring and Managing the Environment
 
 Introductions
 +++++++++++++
@@ -88,14 +101,6 @@ Initial Setup
 
 - Take note of the *Passwords* being used.
 - Log into your virtual desktops (connection info below)
-
-Agenda
-++++++
-
-- Nutanix Technology Overview
-- Nutanix Configuration Labs
-- Deploying and Managing Workloads
-- Monitoring and Managing the Environment
 
 Environment Details
 +++++++++++++++++++
