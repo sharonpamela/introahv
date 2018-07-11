@@ -75,6 +75,7 @@ What's New
 
 - Workshop updated for the following software versions:
   - AOS 5.6
+  - PC 5.7.1
 
 Introductions
 +++++++++++++
@@ -104,11 +105,16 @@ Nutanix Workshops are intended to be run in the Nutanix Hosted POC environment. 
 Networking
 ..........
 
-Hosted POC clusters follow a standard naming convention, where the numerical suffix corresponds to the subnet for that cluster:
+Hosted POC clusters follow a standard naming convention:
 
 - **Cluster Name** - POC\ *XYZ*
-- **Subnet** - 10.21.\ *XYZ*\ .0
-- **Cluster IP** - 10.21.\ *XYZ*\ .37
+- **Subnet** - 10.**21**.\ *XYZ*\ .0
+- **Cluster IP** - 10.**21**.\ *XYZ*\ .37
+
+If provisioned from the marketing pool:
+- **Cluster Name** - MKT\ *XYZ*
+- **Subnet** - 10.**20**.\ *XYZ*\ .0
+- **Cluster IP** - 10.**20**.\ *XYZ*\ .37
 
 For example:
 
