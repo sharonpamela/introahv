@@ -75,6 +75,12 @@ What page would show you the latest activity in the system? On this page, you ca
 
 First Way, In **Prism Central > Home**, click **View All Tasks**. Second Way, click :fa:`circle-o`
 
+.. note::
+
+  - vCenter Server instances can be registered to Prism via Prism's :fa:`cog` icon.
+  - Registering a Nutanix Cluster running ESXi with vCenter allows to perform core VM management operations directly from Prism without switching to vCenter Server.
+  - The vCenter Server that is managing the hosts in the cluster is auto-discovered and its IP address is auto-populated in the Address field as shown in the example below.
+
 Prism Element
 +++++++++++++
 
@@ -170,6 +176,18 @@ What page would show you the latest activity in the system? On this page, you ca
 .. figure:: images/nutanix_tech_overview_09.png
 
 First Way, In **Prism > Tasks**, click **Tasks**. Second Way, click :fa:`circle-o`.
+
+.. note::
+
+  - The containers created in Prism appear as datastores in vCenter.
+
+  Example view of storage containers from Prism:
+
+  .. figure:: images/nutanix_tech_overview_13.png
+
+  Example view of storage containers (datastores) from vCenter:
+
+  .. figure:: images/nutanix_tech_overview_14.png
 
 Takeaways
 +++++++++

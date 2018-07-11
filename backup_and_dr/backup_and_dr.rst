@@ -13,6 +13,7 @@ Nutanix Local Snapshots (Time Stream)
 .....................................
 
 Use Cases
+
 - Protection against Guest OS corruption
 - Snapshot VM environments
 - Self-Service File Level Restore
@@ -59,7 +60,7 @@ Points of differentiation
 - Multiple DR topologies
 - Multiple retention policies
 - WAN optimized replication
-- Rest API driven (customer DR runbooks)
+- Rest API driven(customer DR runbooks)
 - VM and application level consistency
 
 .. figure:: images/backup_and_dr_04.png
@@ -75,7 +76,7 @@ Use Cases
 Key Points
 
 - Easy to setup and manage
-- Interop with a-sync replication (3rd site)
+- Interop with a-sync replication(3rd site)
 - Witness Option
 - Rest API driven (customer DR runbooks)
 

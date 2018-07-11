@@ -48,6 +48,14 @@ Select the VM, then click **Launch Console** from the **Actions** drop-down menu
 
 .. figure:: images/manage_workloads_01.png
 
+.. note::
+
+  In ESX:
+
+  - The steps in this exercise could also be done from Prism while using an ESXi cluster which VMware vCenter instance is registered to Prism. The image below shows what the Actions drop down menu would look like for a VM hosted in ESXi VM versus one hosted in AHV side by side for comparison.
+
+  .. figure:: images/manage_workloads_06.png
+
 Prism Search
 ............
 
@@ -150,6 +158,13 @@ Either select a host manually or allow AHV to select it, then click **Migrate**.
 You should see that the VM has moved to the other host.
 
 .. figure:: images/manage_workloads_05.png
+
+High Availability
+.................
+
+High availability is enabled by default for AHV and will restart VMs in a best-effort manner in the event of a host failure. Additional configuration can set resource reservations to ensure there is capacity during an HA event.
+
+VMware HA works by providing high availability for virtual machines by pooling the virtual machines and the hosts they reside on into a cluster. The hosts in that cluster are then monitored and in case there is a failure, the VMs residing on the failed host would get restarted on alternate hosts. This feature must be turned on in vSphere, as opposed to AHV where it’s on by default without reservation.
 
 Takeaways
 +++++++++
