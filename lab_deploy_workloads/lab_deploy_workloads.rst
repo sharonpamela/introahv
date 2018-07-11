@@ -14,7 +14,7 @@ Image Configuration
 
 Nutanix's Image Service is where you can store your build ISOs, as well as Disk Images you create (similar to VMware Templates).
 
-We will upload a small Linux distro (Raspian OS) to use for deploying VMs.
+We will upload CentOS ISO to use for deploying VMs.
 
 In **Prism Central > Explore**, click **Images**.
 
@@ -22,13 +22,13 @@ Next click **Add Image**, and click **URL**.
 
 Fill out the following fields and click **Upload File**:
 
-- **Enter Image URL** - http://vx2-downloads.raspberrypi.org/pixel_x86/images/pixel_x86-2016-12-13/2016-12-13-pixel-x86-jessie.iso
+- **Enter Image URL** - http://10.20.134.222/images/CentOS-7-x86_64-Minimal-1804.iso
 
 .. figure:: images/deploy_workloads_01.png
 
 Next, fill out the following fields and click **Save**:
 
-- **Image Name** - RaspberryPI-*intials*
+- **Image Name** - CentOS7-*intials*
 - **Image Type** - ISO
 - **Image Description** - (Optional) Add a description
 
@@ -60,7 +60,7 @@ Fill out the following fields and click **Save**:
 - Select **+ Add New Disk**
 - **Type** - DISK
 - **Operation** - Clone from Image Service
-- **Image** - RaspberryPI-*intials* (The Image we added above)
+- **Image** - CentOS7-*intials* (The Image we added above)
 - **Storage Container** - Default Container
 - Select **Add**
 

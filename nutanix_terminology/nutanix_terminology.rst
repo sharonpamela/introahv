@@ -27,6 +27,18 @@ Nutanix Storage
 Tunable Redundancy
 ..................
 
+What is it?
+
+- Configure different levels of fault tolerance for different applications dynamically
+- Works with EC-X for capacity savings
+
+Points of differentiation:
+
+- Software-defined. No prior understanding of storage required
+- RF-3 offers protection against two simultaneous disk, node and NIC failures
+- Switch between RF-2 and RF-3
+- Replication set at the container level
+
 .. figure:: images/nutanix_terminology_03.png
 
 Nutanix EC-X (Erasure Coding)
@@ -97,27 +109,6 @@ Cold Data - HDD
 
 .. figure:: images/nutanix_terminology_07.png
 
-Anatomy of a Read I/O
-.....................
-
-Performance and Availability
-
-- Data is read locally
-- Remote access only if data is not locally present
-
-.. Image for ReadIO images/nutanix_terminology_08.png
-
-Anatomy of a Write I/O
-......................
-
-Performance and Availability
-
-- Data is written locally
-- Replicated on other nodes for high availability
-- Replicas are spread across cluster for high performance
-
-.. Image for WriteIO images/nutanix_terminology_09.png
-
 CVM Auto-Pathing
 ................
 
@@ -151,12 +142,12 @@ Acropolis Dynamic Scheduling (ADS)
 - Automatic Detection, and remediation of CPU and storage hot-spots
 - Initial VM Placement
 - Following anomalies are detected:
-  - CPU hot spots
-  - Storage controller hot spots
-  - Affinity rule violation
+    - CPU hot spots
+    - Storage controller hot spots
+    - Affinity rule violation
 - If anomalies are found, re-mediation by:
-  - Live migration of VMs
-  - ABS iSCSI session re-direction
+    - Live migration of VMs
+    - ABS iSCSI session re-direction
 
 .. figure:: images/nutanix_terminology_12.png
 
@@ -168,8 +159,8 @@ What it does
 - Auto restart user VMs after host failure
 - Policy enabled through Prism
 - AHV picks the best admission control policy:
-  - Reserved segments (default)
-  - Reserved host
+    - Reserved segments (default)
+    - Reserved host
 
 Benefits
 
@@ -230,9 +221,9 @@ Fully distributed networking, based on open standards, simplifies deployment and
 - Virtual Networks w/vLANs
 - IP Address Management (DHCP)
 - Bond / Link Aggregation
-  - Active / Backup
-  - Source-NIC Load Balancing
-  - LACP
+    - Active / Backup
+    - Source-NIC Load Balancing
+    - LACP
 - Each bridge has a bond, backed by one or more uplinks
 
 .. figure:: images/nutanix_terminology_16.png
@@ -244,13 +235,13 @@ Regain Visibility and Control Inside Your Datacenter
 
 - All networking native in AHV (nothing to install)
 - Logical grouping via Categories in Prism Central
-  - Categories group VM or Applications
+    - Categories group VM or Applications
 - Security policies map to categories
-  - Management of category membership simplifies process
+    - Management of category membership simplifies process
 - Rules pushed from PC -> CVM -> AHV -> OVS
-  - AHV host OVS enforces rules
+    - AHV host OVS enforces rules
 - Rules logical enforced at VM (vNIC) level
-  - Firewall in front of every VM
+    - Firewall in front of every VM
 
 .. figure:: images/nutanix_terminology_17.png
 
@@ -276,19 +267,12 @@ Image service
 - Image management through PE or PC
 - Inline conversion to Acropolis DSF
 - Broad Format support:
-  - qcow
-  - qcow2
-  - vmdk
-  - VHD
-  - VHDx
-  - RAW
-  - ISO
+    - qcow
+    - qcow2
+    - vmdk
+    - VHD
+    - VHDx
+    - RAW
+    - ISO
 
 .. figure:: images/nutanix_terminology_19.png
-
-Video Demonstration: Resiliency
-+++++++++++++++++++++++++++++++
-
-Watch this video demonstration of resiliency during a sequential node failure test using Nutanix X-Ray.
-
-https://nutanixinc-my.sharepoint.com/personal/sharon_santana_nutanix_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsharon%5Fsantana%5Fnutanix%5Fcom%2FDocuments%2Fx%2Dray%2Dsequential%20node%20failure%2Emp4&parent=%2Fpersonal%2Fsharon%5Fsantana%5Fnutanix%5Fcom%2FDocuments&slrid=e1626a9e%2D806c%2D5000%2Dd3e2%2Da58b16b774e5
