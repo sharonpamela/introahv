@@ -77,6 +77,8 @@ First Way, In **Prism Central > Home**, click **View All Tasks**. Second Way, cl
 
 .. note::
 
+  In ESX:
+  
   - vCenter Server instances can be registered to Prism via Prism's :fa:`cog` icon.
   - Registering a Nutanix Cluster running ESXi with vCenter allows to perform core VM management operations directly from Prism without switching to vCenter Server.
   - The vCenter Server that is managing the hosts in the cluster is auto-discovered and its IP address is auto-populated in the Address field as shown in the example below.
