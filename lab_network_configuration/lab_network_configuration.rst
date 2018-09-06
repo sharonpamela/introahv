@@ -65,7 +65,7 @@ Next click **VM Networks**, then click **+ Create Network**.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Network-*intials*
+- **Name** - Network-*initials*
 - **VLAN ID** - Something other than 0
 - **Enable IP Address Management** - unchecked
 
@@ -81,7 +81,7 @@ Create another network, but this time enable IPAM.
 
 Fill out the following fields and click **Save**:
 
-- **Name** - Network_IPAM-*intials*
+- **Name** - Network_IPAM-*initials*
 - **VLAN ID** - Something other than 0
 - **Enable IP Address Management** - Checked
 - **Network IP Address / Prefix Length** - 10.0.0.0/24

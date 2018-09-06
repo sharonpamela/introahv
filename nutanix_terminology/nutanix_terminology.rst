@@ -13,6 +13,7 @@ Physical Infrastructure
 A Nutanix cluster is made up of Nodes and Blocks.
 
 .. figure:: images/nutanix_terminology_01.png
+.. figure:: images/nutanix_terminology_01-2.png
 
 Storage Pools and Containers
 ............................

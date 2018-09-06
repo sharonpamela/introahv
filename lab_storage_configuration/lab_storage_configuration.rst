@@ -43,7 +43,7 @@ Go back to the container you created above and try adding another 10 GiB to the 
 
 .. figure:: images/storage_config_02.png
 
-Redundancy Factor
+Redundancy Factor (RF)
 .................
 
 We have discussed how Nutanix clusters handle data: reads, writes, CVM auto-pathing, data locality, intelligent tiering, and seamless VM migrations. While leveraging these features and capabilities, Nutanix clusters continuously monitor and handle data placement in order to optimize performance and allow clusters to maintain high availability during software upgrades and failures.
@@ -52,8 +52,12 @@ You can locate the redundancy level of containers and the cluster within Prism, 
 
 .. figure:: images/storage_config_03.png
 
+Block awareness, introduced in 4.0, allows the cluster to survive a full 2RU block failure without using any more disk space.The basic requirement for rack/block fault tolerance is to have minimum 3 blocks in the cluster as we need to store 3 copies of metadata.
+Starting in AOS 5.8, block awareness is supported in conjunction with erasure coding.
+
 In **Prism > Home**, click the **green OK** in the Data Resiliency Status box. This opens the Data Resiliency Status window.
 
+.. note::
 The RF of a cluster in Prism Element could be configured by clicking **Redundancy State** in the Gear menu.
 
 .. note::

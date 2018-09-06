@@ -26,7 +26,7 @@ Explore the information on the **Home** screen:
 - Cluster Runway
 - Cluster Quick Access
 - Impacted Cluster | Alerts
-- tasks
+- Tasks
 
 Review the **Explore** screen:
 
@@ -43,7 +43,7 @@ Review the other sections, and do a quick walk through:
 
 - Planning
 - Analysis
-- Apps (We will configure this later in the workshop)
+- Calm (We will configure this later in the workshop)
 - Alerts
 - Tasks :fa:`circle-o`
 - Search :fa:`search`
